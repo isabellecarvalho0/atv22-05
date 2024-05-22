@@ -1,0 +1,157 @@
+/* style.css */
+
+/* General reset and body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100%;
+    position: relative;
+}
+
+header {
+    background-color: #bea7ca;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Ajuste o tamanho conforme necessário */
+    font-family: 'Poetsen One', sans-serif; /* Aplica a mesma fonte */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-section label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+#color-filter {
+    font-size: 1em;
+    padding: 5px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    width: 220px; /* Set fixed width for images */
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+}
+
+.image-item img {
+    width: 100%; /* Make images fill the container */
+    height: 220px; /* Fixed height for images to make them square */
+    object-fit: cover; /* Ensure images are covered without distortion */
+    border-radius: 10px;
+}
+
+.image-item p {
+    font-size: 0.9em; /* Smaller font size for text */
+    line-height: 1.5em;
+    margin-top: 10px; /* Space between image and text */
+    font-family: 'Poetsen One', sans-serif; /* Apply the new font */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-item {
+        width: 90%;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+}
+/* style.css */
+
+#color-filter {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#color-filter:hover {
+    border-color: #aaa;
+}
+
+#color-filter:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+.filter-image.achromatomaly {
+    filter: grayscale(100%);
+}
+ 
+.filter-image.acromatomia {
+    filter: grayscale(50%);
+}
+ 
+.filter-image.deuteranomaly {
+    filter: hue-rotate(180deg);
+}
+ 
+.filter-image.deuteromalacia {
+    filter: hue-rotate(30deg); /* Ajuste o ângulo conforme necessário */
+}
+.filter-image.tritanomaly {
+    filter: sepia(100%) saturate(300%) hue-rotate(-50deg);
+}
+ 
+.filter-image.protanomaly {
+    filter: sepia(35%) saturate(100%);
+}
